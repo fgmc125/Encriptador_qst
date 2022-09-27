@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Encriptador de Texto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!---- fontawesome ---->
+
+    <script
+      src="https://kit.fontawesome.com/4d63ed8f35.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!---- favicon ---->
+
+    <!---- fonts ---->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!---- styles ---->
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <!---- Main sections ---->
+    <main class="container">
+      <!---- Header ---->
+
+      <header class="header-btn">
+        <!--<img src="img/logo.png" class="logo-title" />-->
+      </header>
+
+      <!-- field text sections -->
+
+      <div class="section-container-main">
+        <div class="section-text-btn">
+          <div class="text-write">
+            <textarea
+              id="inputText"
+              class="input-text"
+              type="text"
+              placeholder="Ingrese el texto aqui"
+              textarea
+            ></textarea>
+          </div>
+          <p class="text-limit">
+            No se permiten mayusculas ni acentos, ni numeros
+          </p>
+
+          <!---- Buttons sections ---->
+
+          <div class="buttons">
+            <button class="btn" id="encript" type="submit">Encriptar</button>
+            <button
+              onclick="decryptText()"
+              class="btn"
+              id="decrypt"
+              type="submit"
+            >
+              Desencriptar
+            </button>
+            <button
+              onclick="copyToClipBoard()"
+              id="copy-text"
+              type="button"
+            >Copiar</button>
+          </div>
+        </div>
+
+        <!---- input sections ---->
+
+        <div class="input-btn-content">
+          <div class="text-box disabled">
+            <p id="text-result"></p>
+          </div>
+          <div class="alert-message-box">
+            <img src="img/muñeco.png" id="muneco-img" class="muneco" />
+            <p class="alert-message">Ningún mensaje fue encontrado</p>
+            <p class="alert-message2">
+              Ingresa el mensaje que desees encriptar o desencriptar.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!---- Footer ---->
+
+      <footer>
+        <div class="footer__content-copyright">
+          <p>
+            Copyright © 2022
+            </a>
+          </p>
+        </div>
+      </footer>
+    </main>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
